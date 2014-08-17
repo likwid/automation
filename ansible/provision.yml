@@ -1,0 +1,27 @@
+---
+- hosts: client
+  sudo: yes
+  gather_facts: yes
+  tasks:
+  - name: Add server to hosts
+    lineinfile:
+      dest: /etc/hosts
+      line: "192.168.50.5 server"
+
+- hosts: server
+  sudo: yes
+  gather_facts: yes
+  roles:
+  # - packager
+  - omnibus
+  tasks:
+  - name: Add client to hosts
+    lineinfile:
+      dest: /etc/hosts
+      line: "192.168.50.10 client"
+
+- hosts: all
+  sudo: yes
+  gather_facts: yes
+  roles:
+  - Ansibles.utilities

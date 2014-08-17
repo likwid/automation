@@ -1,0 +1,6 @@
+---
+- name: Install omnibus
+  gem:
+    name: "{{ item }}"
+  with_items:
+  - omnibus

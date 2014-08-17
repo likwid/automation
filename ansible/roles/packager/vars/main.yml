@@ -1,0 +1,17 @@
+---
+packages:
+- build-essential
+- git-core
+- libgd2-xpm-dev
+- libgeoip-dev
+- libncurses5-dev
+- libpcre3-dev
+- libreadline-dev
+- libssl-dev
+- libxslt1-dev
+- make
+- perl
+- ruby1.9.1
+- ruby1.9.1-dev
+- unzip
+- zip

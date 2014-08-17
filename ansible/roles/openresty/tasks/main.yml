@@ -1,0 +1,12 @@
+---
+- name: Download openresty
+  get_url:
+    url: http://openresty.org/download/ngx_openresty-{{ version }}.tar.gz
+    dest: /tmp/openresty-{{ version }}.tar.gz
+
+- name: Unarchive openresty
+  unarchive:
+    src: /tmp/openresty-{{ version }}.tar.gz
+    dest: /usr/local/bin
+    copy: no/tmp/openresty-{{ version }}
+
